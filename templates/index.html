@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Book Review Website</title>
+    <!-- add the font awesome link here -->
+    <link href="static\style2.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+                <a class="navbar-brand" href="#">BooksReviews</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Books</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Browse
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Recommendations</a>
+                                <a class="dropdown-item" href="#">New Releases</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Explore</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#">Community</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <ul class="navbar-nav my-2 my-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                User
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#"> name </a>
+                                <a class="dropdown-item" href="http://127.0.0.1:5000/signup">Settings</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="http://127.0.0.1:5000/login">Sign in</a>
+                                <a class="dropdown-item" href="{{ url_for('logout') }}">Sign out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <setion class="header">
+            <img style="width: 100%;"
+                src="https://p0.pikrepo.com/preview/435/18/boy-sitting-on-book-and-reading-book.jpg"
+                alt="Boy sitting on book and reading book">
+            <h1>BooksReviewsApp</h1>
+            <h2>Click here to see more <a href="#">books reviews</a></h2>
+        </setion>
+
+        <section>
+            <div>
+                <h3 style="color: orange;">Benefits of Reading Books: How It Can Positively Affect Your Life</h3>
+                <ul>
+                    <li>Strengthens the brain.</li>
+                    <li>Increases empathy.</li>
+                    <li>Builds vocabulary.</li>
+                    <li>Prevents cognitive decline.</li>
+                    <li>Reduces stress.</li>
+                    <li>Aids sleep.</li>
+                    <li>Alleviates depression.</li>
+                    <li>Lengthens lifespan.</li>
+                </ul>
+                <h3 style="color: orange;">Fast Reading Tips</h3>
+                <p>If you want to read faster while maintaining reading comprehension, check out these seven tips.</p>
+                <ol>
+                    <li>Preview the text.</li>
+                    <li>Plan your attack.</li>
+                    <li>Be mindful.</li>
+                    <li>Don't read every word.</li>
+                    <li>Don't read every section.</li>
+                    <li>Write a summary.</li>
+                    <li>Practice timed runs.</li>
+                </ol>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card mb-3" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="https://t1.bookpage.com/books/images/e162f95baaaf83870099d8a1dd7e5302/medium.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Review</h5>
+                                <p class="card-text">The small town of Lovelock, Nevada, is nestled in brush-dotted
+                                    hills that crouch under unending blue sky—an eerie desert landscape that sets a tone
+                                    of creeping dread in Heather Young’s The Distant Dead. Young, an Edgar Award nominee
+                                    for her first book, 2016’s The Lost Girls, has...</p>
+                                <a href="#" class="btn btn-primary">Read the Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="card mb-3" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="https://t1.bookpage.com/books/images/469d007c5a2864b9a7ad763cabf44959/medium.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Review</h5>
+                                <p class="card-text">Kittens are furry balls of unbridled energy, careening around the
+                                    house at lightning speed and then plunging into sleep wherever they happen to land.
+                                    They’re adorable and fearless agents of household delight and chaos. In Joy, Yasmeen
+                                    Ismail and Jenni Desmond winningly capture kittenhood for an aptly titled
+                                    read-aloud. A gray tabby kitten named Joy bats and flings around a red ball of yarn
+                                    with abandon...</p>
+                                <a href="#" class="btn btn-primary">Read the Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="card mb-3" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="https://t1.bookpage.com/books/images/ab4bc45f6fb7ef63bff23f1262e9cb34/medium.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Review</h5>
+                                <p class="card-text">Small-town Washington state, 1957: The Cold War with Russia is in
+                                    full swing, the threat of nuclear war is omnipresent, the space race is in
+                                    hyperspeed, and Sarah Dewhurst is making friends with the dragon her father
+                                    begrudgingly hired to help on the family farm...</p>
+                                <a href="#" class="btn btn-primary">Read the Review</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card mb-3" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="https://t1.bookpage.com/books/images/c222376a8c79297da9eea4ee03df5fe9/medium.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Review</h5>
+                                <p class="card-text">Adelaide’s life has been turned upside down by her brother’s
+                                    addiction, her family’s separation and her devastating breakup with Mikey Double L.
+                                    With an aching heart and an unfinished school project hanging over her head,
+                                    threatening her final grades, Adelaide chooses to...</p>
+                                <a href="#" class="btn btn-primary">Read the Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="card mb-3" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="https://t1.bookpage.com/books/images/46ca48ef0f7a39b71a64045b54e9f3b8/medium.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Review</h5>
+                                <p class="card-text">“We are last names only. We are numbers.” From the first page of
+                                    this account of a mother from Guatemala being separated from her sons at the
+                                    southern U.S. border, readers are drawn into the wrenching impact of American
+                                    immigration policy on parents and children. The Book of...</p>
+                                <a href="#" class="btn btn-primary">Read the Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm">
+                        <div class="card mb-3" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="https://t1.bookpage.com/books/images/59aff42f0831db9951849495ca36ed33/medium.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Review</h5>
+                                <p class="card-text">Winch, an award-winning Aboriginal Australian writer who is now
+                                    based in France, uses this dictionary of recovered indigenous words to transmit the
+                                    deeper story of Gondiwindi family history. We read it&mdash;and the novel as a
+                                    whole&mdash;with both sorrow and hope.&nbsp;</p>
+                                <a href="#" class="btn btn-primary">Read the Review</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+            <div>
+                <h2>Reviews</h2>
+                {% for review in reviews %}
+                <li>{{ review }}</li>
+                {% endfor %}
+
+                {% for c in comments %}
+                <li>{{ c.reviews }}</li>
+                {% endfor %}
+
+
+                <form action="{{ url_for('index') }}" method="post">
+                    <div class="form-group">
+                        <h3>Comments about your experience</h3>
+                        <textarea name="review" id="" cols="60" rows="5"
+                            placeholder="Tell us what you liked and/or did not like"></textarea>
+                    </div>
+                    <input type="submit" value="Submit" class="btn" />
+                </form>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Copyright Me 2020</p>
+        </footer>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

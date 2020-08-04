@@ -1,0 +1,46 @@
+
+
+h1 {
+    font-family: Lobster, monospace;
+    font-size: 16px;
+    color: aqua;
+}
+
+footer {
+    margin-top: 70px;
+    background-color: #e3f2fd;
+    color: blank; 
+}
+  
+footer p {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold; 
+}
+
+.btn {
+	display: block;
+	width: 100%;
+	background: #333;
+	color: #fff;
+	padding: 10px 20px;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	margin-top: 1rem;
+}
+
+  
+#container {
+    width: 80%;
+    margin: auto; }
+  
+@media screen and (max-width: 768px) {
+    #container {
+      width: 90%; 
+    }
+}
+
+    

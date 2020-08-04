@@ -1,0 +1,46 @@
+body {
+    background-color: blue;
+  }
+
+  .loginaccount {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .fullcard {
+    background-color: whitesmoke;
+    width: 350px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 4px;
+    margin: auto;
+    position: relative;
+    top: 150px;
+  }
+  
+  .cardcontent {
+    margin-top: 15px;
+    padding: 10px;
+
+  }
+  
+  .cardtext {
+    margin: auto;
+  }
+  
+  .btn {
+    background-color: blue;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 320px;
+    height: 50px;
+    text-align: center;
+  }
+
+ .message {
+   color: red;
+ }
+
+
+  

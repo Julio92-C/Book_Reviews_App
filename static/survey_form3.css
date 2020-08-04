@@ -1,0 +1,112 @@
+body {
+    background: linear-gradient(90deg, rgb(70, 56, 112), rgb(155, 133, 222));
+  }
+  
+  h1 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 30px;
+    color: white;
+  }
+  
+  #description {
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    padding-bottom: 5px;
+  }
+  
+  .message {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(240, 232, 18);
+    padding-bottom: 5px;
+  }
+
+  .main {
+    border: 1px solid;
+    margin: auto;
+    border-radius: 5px;
+    width: 60%;
+    min-height: 500px;
+    background-color: rgb(34, 14, 94);
+  }
+  
+  .label-items {
+    color: white;
+    font-size: 20px;
+  }
+  
+  .form-class {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin: auto;
+    width: 90%;
+  }
+  
+  .radio-bottons {
+    display: block;
+    position: relative;
+    margin: auto;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 18px
+  }
+  
+  .checkbox-bottons {
+    margin: auto;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 18px
+  }
+  
+  .button-class {
+    color: white;
+    font-size: 20px;
+    background-color: rgb(73, 181, 24);
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    position: relative;
+    left: 5%;
+    width: 90%;
+  }
+  
+  button:hover {
+    background-color: rgb(59, 110, 36);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .main {
+      width: 90%;
+    }
+  }
+  
+  @media screen and (min-width: 600px) {
+    .main {
+      width: 80%;
+    }
+  }
+  
+  @media screen and (min-width: 1000px) {
+    h1 {
+      text-align: center;
+      padding-top: 60px;
+      font-size: 40px;
+      color: white;
+    }
+  
+    #description {
+      text-align: center;
+      font-size: 28px;
+      color: white;
+      padding-bottom: 20px;
+    }
+  
+    .main {
+      width: 60%;
+    }
+  }
+  

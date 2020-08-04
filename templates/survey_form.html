@@ -1,0 +1,165 @@
+{% extends "bootstrap/base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='survey_form3.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description"><em>Thank you for taking the time to help us improve the platform</em></p>
+    {% if message %}
+    <p class="message">{{ message | safe }}</p>
+    {% endif %}
+    <div class="main">
+        <form id="survey-form" action="/survey_form" method="POST">
+            <div class="form-class">
+                <label id="name-label" class="label-items" for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-class">
+                <label id="email-label" class="label-items" for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"
+                    required>
+            </div>
+            <div class="form-class">
+                <label id="number-label" class="label-items" for="number">Age(optional)</label>
+                <input type="number" id="number" name="age" class="form-control" min="10" max="100" placeholder="Age"
+                    required>
+            </div>
+            <div class="form-class">
+                <label class="label-items" for="dropdown">Which option best describes your current role?</label>
+                <select class="form-control" id="dropdown" name="current_role">
+                    <option selected disabled>Select current role</option>
+                    <option value="Student">Student</option>
+                    <option value="Full Time Job">Full Time Job</option>
+                    <option value="Full Time Learner">Full Time Learner</option>
+                    <option value="Prefer not to say">Prefer not to say</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-class">
+                <label class="label-items" for="">Would you recommend freeCodeCamp to a friend?</label>
+                <div class="radio-bottons custom-control custom-radio">
+                    <input type="radio" id="customRadio1" name="recommendation" class="custom-control-input"
+                        value="Definitely">
+                    <label class="custom-control-label" for="customRadio1">Definitely</label>
+                </div>
+                <div class="radio-bottons custom-control custom-radio">
+                    <input type="radio" id="customRadio2" name="recommendation" class="custom-control-input"
+                        value="Maybe">
+                    <label class="custom-control-label" for="customRadio2">Maybe</label>
+                </div>
+                <div class="radio-bottons custom-control custom-radio">
+                    <input type="radio" id="customRadio3" name="recommendation" class="custom-control-input"
+                        value="Not sure">
+                    <label class="custom-control-label" for="customRadio3">Not sure</label>
+                </div>
+            </div>
+            <div class="form-class">
+                <label class="label-items" for="dropdown">What is your favorite feature of freeCodeCamp?</label>
+                <select class="form-control" id="dropdown" name="preferences">
+                    <option selected disabled>Select an option</option>
+                    <option value="Challenges">Challenges</option>
+                    <option value="Projects">Projects</option>
+                    <option value="Community">Community</option>
+                    <option value="Open Source">Open Source</option>
+                </select>
+            </div>
+            <div class="form-class">
+                <label class="label-items" for="">What would you like to see improved? (Check all that apply)</label>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Front-end Projects"
+                        id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Front-end Projects
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Back-end Projects"
+                        id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck2">
+                        Back-end Projects
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Data Visualization"
+                        id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck3">
+                        Data Visualization
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Challenges"
+                        id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck4">
+                        Challenges
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Open Source Community"
+                        id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck5">
+                        Open Source Community
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Gitter help rooms"
+                        id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck6">
+                        Gitter help rooms
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Videos" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck7">
+                        Videos
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="City Meetups"
+                        id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck8">
+                        City Meetups
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Wiki" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck9">
+                        Wiki
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Forum" id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck10">
+                        Forum
+                    </label>
+                </div>
+                <div class="checkbox-bottons form-check">
+                    <input class="form-check-input" type="checkbox" name="projects" value="Additional Courses"
+                        id="defaultCheck2">
+                    <label class="form-check-label" for="defaultCheck11">
+                        Additional Courses
+                    </label>
+                </div>
+            </div>
+            <div class="form-class">
+                <label class="label-items" for="exampleFormControlTextarea1">Any comments or suggestions?</label>
+                <div class="form-group">
+                    <textarea name="comments" class="form-control" id="exampleFormControlTextarea1" rows="10"
+                        placeholder="Enter your comment here..."></textarea>
+                </div>
+            </div>
+            <button id="submit" class="button-class" type="submit" value="submit"
+                class="btn btn-primary">Submit</button>
+        </form>
+
+
+
+    </div>
+</div>
+{% endblock %}

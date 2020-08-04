@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+
+{% block item2 %}
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>freeCodeCamp</h1>
+            <h2 class="review-class">Welcome {{ name }}, please share your experience with us <a
+                    href="http://127.0.0.1:5000/survey_form">here</a>!</h2>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block item3 %}
+
+<div class="itemOne">
+    <h2>Follow us on Social Media</h2>
+    <div class="wrapper1">
+        <div class="media1">
+            <ul>
+                <li><i class="fa fa-facebook-square"></i></li>
+                <li><i class="fa fa-instagram"></i></li>
+                <li><i class="fab fa-twitter-square"></i></li>
+                <li><i class="fab fa-quora"></i></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="itemTwo">
+
+</div>
+
+{% endblock %}
+
+
+{% block item4 %}
+<h2 class="review-class">Reviews</h2>
+{% for review in reviews %}
+<li class="list-class">{{ review }}</li>
+{% endfor %}
+
+{% for c in comments %}
+<li class="list-class">{{ c.reviews }}</li>
+{% endfor %}
+
+
+<form action="{{ url_for('.test') }}" method="post">
+    <div class="form-group">
+        <label class="label-items" for="exampleFormControlTextarea1">
+            <h3><i class="far fa-comment-alt"></i><span class="comment-icon">Leave a comment</span></h3>
+        </label>
+        <textarea class="textarea-class" name="review" id="" rows="10"
+            placeholder="Tell us what you liked and/or did not like"></textarea>
+
+        <input type="submit" value="Submit" class="submit_btn">
+    </div>
+</form>
+
+{% endblock %}

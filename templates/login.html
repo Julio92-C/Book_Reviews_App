@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='login11.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="fullcard">
+  <div class="cardcontent">
+    <div class="cardtext">
+      <form class="px-4 py-3" method="POST" action="/login">
+        <h2 class="loginaccount"><strong>Please sign in</strong></h2>
+        {{ form.hidden_tag() }}
+        {{ wtf.form_field(form.username) }}
+        {{ wtf.form_field(form.password) }}
+        {{ wtf.form_field(form.remember) }}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      {% if message %}
+      <p class="message" style="color: crimson;">{{ message | safe }}</p>
+      {% endif %}
+      <hr>
+      <p><a href="http://127.0.0.1:5000/signup">New around here? <u>Sign up</u></a></p>
+      <p><a href="#">Forgot password?</a></p>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
